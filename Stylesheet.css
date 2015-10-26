@@ -1,3 +1,14 @@
 body {
+    color: white;
+    font-family: sans-serif;
+    text-align: inherit;
+}
 
+p {
+    font-size: 20px;
+}
+
+#Header {
+    padding: 15px;
+    background-color: #4d4ddb;
 }
