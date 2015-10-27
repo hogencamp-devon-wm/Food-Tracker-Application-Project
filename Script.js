@@ -8,6 +8,7 @@ var ShelfLife;
 
 // Jquery code
 $(document).ready(function(){
-    var foodname = $("myForm").getElementsByName('foodName');
-    $("FoodTable").append(foodname);
+    FoodName = $("myForm").getElementsByName('FoodName');
+    
+    $("FoodTable").append(FoodName);
 });
