@@ -1,14 +1,20 @@
-// Variables
 
-var FoodName;
-
-var Description;
-
-var ShelfLife;
 
 // Jquery code
 $(document).ready(function(){
-    FoodName = $("myForm").getElementsByName('FoodName');
+    // Variables
+    var FoodName;
+
+    var Description;
+
+    var ShelfLife;    
     
-    $("FoodTable").append(FoodName);
+    $("#Submit").click(function() {
+        
+        FoodName = $("#FoodName").val();
+        
+        $("#Paragraph").html(FoodName);
+        
+    });
+    
 });
