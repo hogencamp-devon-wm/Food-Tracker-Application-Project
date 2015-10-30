@@ -1,5 +1,3 @@
-
-
 // Jquery code
 $(document).ready(function(){
     // Variables
@@ -11,9 +9,9 @@ $(document).ready(function(){
     
     $("#Submit").click(function() {
         
-        FoodName = $("#FoodName").val();
+        ShelfLife = $("#Date").val();
         
-        $("#Paragraph").html(FoodName);
+        $("#Paragraph").html(ShelfLife);
         
     });
     
