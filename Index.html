@@ -4,34 +4,34 @@
     <head>
         <title>Food Tracker Application</title>
         
-        <link rel="stylesheet" type="text/css" href="Stylesheet.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
         
-        <script type="text/javascript" src="App.js"></script>
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+        
+        <link rel="stylesheet" type="text/css" href="Stylesheet.css" />
 	    
         <script type="text/javascript" src="Script.js"></script>
     </head>
     
     <body>
-        <div id = "HeaderMain">
-            <h1>Food Tracker</h1>
-        </div>
+        <input type = "text" id = "Name">
         
-        <div id = "FoodInput">
-            <div id = "HeaderInput">
-                <input type="date" id = "Date"></input>
-			  
-                <input type="text" id = "FoodName"></input>
-
-                <button id = "Submit">Submit</button>   
-            </div>
-        </div>
+        <input type = "text" id = "Description">
         
-        <div id = "FoodOutput">  
-            <div id = "FoodTable">
-                
-		  	<p id = "Paragraph">This changes</p>
-                
-            </div>
-        </div>
+        <input type="text"  placeholder="date1" id="startdate">
+        
+        <input type="text" placeholder="date2" id="enddate">
+        
+        <button id = "Submit">Submit</button>
+        
+        <table id = "Table" border = "1px solid black">
+            <thead>
+                <td>Name</td>
+                <td>Description</td>
+                <td>Shelf Life</td>
+            </thead>
+        </table>
     </body>
 </html>

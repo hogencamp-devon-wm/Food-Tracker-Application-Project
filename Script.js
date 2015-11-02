@@ -1,40 +1,41 @@
-// Jquery code
-$(document).ready(function(){
-    // Variables
-    
-    var FoodName;
+$(document).ready(function() {
+  
+    $( "#startdate,#enddate" ).datepicker({
+        changeMonth: true,
+        changeYear: true,
+        firstDay: 1,
+        dateFormat: 'dd/mm/yy',
+    })
 
-    var Description;
+    $( "#startdate" ).datepicker({ dateFormat: 'dd-mm-yy' });
+    $( "#enddate" ).datepicker({ dateFormat: 'dd-mm-yy' });
 
-    var ShelfLife;
+    $('#enddate').change(function() {
+        var start = $('#startdate').datepicker('getDate');
+        var end   = $('#enddate').datepicker('getDate');
+
+        if (start<end) {
+            var days   = (end - start)/1000/60/60/24;
+            $('#days').val(days);
+        }
+        else {
+            alert ("Your food is already expired, it is to late!");
+            $('#startdate').val("");
+            $('#enddate').val("");
+            $('#days').val("");
+        }
+    }); //end change function
+
     
-    var Today = new Date();
     
-    var CurrentDate = Date.parse(Today);
-    
-    var Experation;
-    
-    var FoodExperation = Date.parse(ShelfLife);
-    
-    $("#Submit").click(function() {
+    $("#Submit").click(function(){
+        var Name = $("#Name").val();
+        var Description = $("#Description").val();
         
-        ShelfLife = $("#Date").val();
+        $("#Table").html("<tr><td>" + Name + "</td><td>" + Description + "</td><td>" + days + "</td></tr>");
         
-        $("#Paragraph").html(ShelfLife);
-        
+        if(days <= 3){
+            
+        }
     });
-    if()
-});
-    
-    
-    
- //Try this code   
-    
-/*
-
-var oneDay = 24*60*60*1000; // hours*minutes*seconds*milliseconds
-var firstDate = new Date(2008,01,12);
-var secondDate = new Date(2008,01,22);
-
-var diffDays = Math.round(Math.abs((firstDate.getTime() - secondDate.getTime())/(oneDay)));
-*/
+}); //end ready
