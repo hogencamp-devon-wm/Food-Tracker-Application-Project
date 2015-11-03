@@ -4,36 +4,52 @@
     <head>
         <title>Food Tracker Application</title>
         
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-
-        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-        
-        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
-        
-        <link rel="stylesheet" type="text/css" href="Stylesheet.css" />
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	    
         <script type="text/javascript" src="Script.js"></script>
     </head>
     
     <body>
-        <input type = "text" id = "Name">
         
-        <input type = "text" id = "Description">
-        
-        <input type="text"  placeholder="date1" id="startdate">
-        
-        <input type="text" placeholder="date2" id="enddate">
-        
-        <button id = "Submit">Submit</button>
-        
-        <table style = "width:100%; border: solid black 1px">
-		   <tbody id = "Table">
-		   	<tr>
-		   	   <th>Name</th>
-		   	   <th>Description</th>
-		   	   <th>Shelf Life</th>
-		   	</tr>
-		   </tbody>       
-        </table>
+<form action="index.html" method="post" name="tableAdd">
+    <div id="nameBox">
+        <label for="name">Food Name</label>
+        <input type="text" id="Name" name="name"/>
+    </div>
+    <div id="DoPBox">
+        <label for="DoP">Date of Purchase</label>
+        <input type="date" id="Start" name="buy"/>
+    </div>
+    <div id="DoEBox">
+        <label for="DoE">Expiration Date</label>
+        <input type="date" id="End" name="bad"/>
+    </div>
+    <div id="descriptionBox">
+        <label for="description">Description</label>
+        <input type="text" id="description" name="desc"/>
+    </div>
+    <div>
+        <button type="button" name="inputButton" onclick="Output();">Submit</button>
+    </div>
+</form>
+
+
+
+
+
+
+<table style="width:100%; border: solid black 5px" id="table">
+
+    <tbody id="Output">
+    <tr>
+        <th>Name</th>
+        <th>Date of Purchase</th>
+        <th>Expiration Date</th>
+        <th>Description</th>
+    </tr>
+    </tbody>
+</table>
+
+
     </body>
 </html>
